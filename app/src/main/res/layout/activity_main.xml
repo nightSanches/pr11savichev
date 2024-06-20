@@ -1,0 +1,1499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/gradient"
+        android:gravity="center_vertical">
+
+        <View
+            android:background="@drawable/avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:onClick="OpenProfile"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Поиск"
+            android:textColorHint="@color/white"
+            android:paddingLeft="15dp"
+            android:textColor="@color/white"
+            android:background="@drawable/search_style"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/shop"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_marginRight="10dp"
+            android:onClick="OpenStore"
+            />
+
+        <ImageButton
+            android:layout_marginRight="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/menu"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:onClick="OpenMenu"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_radius">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:onClick="OpenWallet">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Кошелёк "
+                            android:textSize="19dp"
+                            android:textColor="@color/white"
+                            />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@mipmap/arrow"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="5dp"/>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <ImageButton
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/eye"
+                        android:gravity="right"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:onClick="OpenHidden"
+                        />
+
+                    <ImageButton
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/dots"
+                        android:gravity="right"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:onClick="OpenDots"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical">
+                        <ImageButton
+                            android:layout_width="45dp"
+                            android:layout_height="55dp"
+                            android:src="@mipmap/qr"
+                            android:background="@drawable/rectangle"
+                            android:onClick="OpenQR"/>
+
+                        <ImageButton
+                            android:layout_marginTop="5dp"
+                            android:layout_width="44dp"
+                            android:layout_height="55dp"
+                            android:src="@mipmap/shield"
+                            android:background="@drawable/rectangle"
+                            android:onClick="OpenShield"/>
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:scrollbars="none"
+                        android:layout_marginLeft="10dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/rectangle"
+                                android:orientation="vertical"
+                                android:padding="10dp"
+                                android:onClick="OpenCard">
+
+                                <ImageView
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:src="@mipmap/card"/>
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0 ₽"
+                                    android:textColor="@color/white"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Зарплатная ●● 2222"
+                                    android:textSize="9dp"
+                                    android:textColor="@color/white"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/rectangle"
+                                android:orientation="vertical"
+                                android:padding="10dp"
+                                android:onClick="OpenCard">
+
+                                <ImageView
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:src="@mipmap/card"/>
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0 ₽"
+                                    android:textColor="@color/white"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Зарплатная ●● 2222"
+                                    android:textSize="9dp"
+                                    android:textColor="@color/white"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:background="@drawable/rectangle"
+                                android:orientation="vertical"
+                                android:padding="10dp"
+                                android:onClick="OpenCard">
+
+                                <ImageView
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:src="@mipmap/card"/>
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0 ₽"
+                                    android:textColor="@color/white"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Зарплатная ●● 2222"
+                                    android:textSize="9dp"
+                                    android:textColor="@color/white"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="103dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp">
+
+                <ImageButton
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="104dp"
+                    android:background="@android:color/transparent"
+                    android:onClick="OpenAdvert"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/advert" />
+
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="5dp"
+                    android:background="@android:color/transparent"
+                    android:onClick="Close"
+                    android:text="✕" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:onClick="OpenTrans">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Переводы на сбер"
+                        android:textSize="19dp"
+                        android:textColor="@color/black"
+                        />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Все (13)"
+                        android:textSize="16dp"
+                        android:textColor="#138127"
+                        />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:onClick="OpenCreateTrans">
+                            <LinearLayout
+                                android:background="@drawable/transfer_money"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:gravity="center"
+                                >
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:src="@mipmap/arrow_right"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Новый\nПеревод"
+                                android:textAlignment="center"
+                                android:textSize="14dp"
+                                android:textColor="#187e2a"
+                                />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false">
+                            <FrameLayout
+                                android:id="@+id/frame"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:onClick="OpenUser"
+                                android:background="@drawable/transfer_for">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Л Л"
+                                    android:textColor="#6a6a6a"
+                                    android:textSize="16dp" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/frame"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:text="Леонид\nЛукиных"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:textSize="14dp"
+                                android:onClick="OpenLeonid"/>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:onClick="OpenUser">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/transfer_for" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Л Л"
+                                    android:textSize="14dp"
+                                    android:textColor="#6a6a6a"
+                                    android:layout_gravity="center" />
+
+                                <FrameLayout
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="bottom|end"
+                                    android:layout_marginBottom="-2dp"
+                                    android:layout_marginEnd="-2dp"
+                                    android:background="@drawable/orange_circle">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="1"
+                                        android:textSize="10dp"
+                                        android:textColor="#FFFFFF" />
+                                </FrameLayout>
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Леонид\nЛукиных"
+                                android:textAlignment="center"
+                                android:textSize="14dp"
+                                android:textColor="@color/black"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:onClick="OpenUser">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/transfer_for" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Л Л"
+                                    android:textSize="14dp"
+                                    android:textColor="#6a6a6a"
+                                    android:layout_gravity="center" />
+
+                                <FrameLayout
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="bottom|end"
+                                    android:layout_marginBottom="-2dp"
+                                    android:layout_marginEnd="-2dp"
+                                    android:background="@drawable/orange_circle">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="1"
+                                        android:textSize="10dp"
+                                        android:textColor="#FFFFFF" />
+                                </FrameLayout>
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Леонид\nЛукиных"
+                                android:textAlignment="center"
+                                android:textSize="14dp"
+                                android:textColor="@color/black"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:onClick="OpenUser">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/transfer_for" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Л Л"
+                                    android:textSize="14dp"
+                                    android:textColor="#6a6a6a"
+                                    android:layout_gravity="center" />
+
+                                <FrameLayout
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="bottom|end"
+                                    android:layout_marginBottom="-2dp"
+                                    android:layout_marginEnd="-2dp"
+                                    android:background="@drawable/orange_circle">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="1"
+                                        android:textSize="10dp"
+                                        android:textColor="#FFFFFF" />
+                                </FrameLayout>
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Леонид\nЛукиных"
+                                android:textAlignment="center"
+                                android:textSize="14dp"
+                                android:textColor="@color/black"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:onClick="OpenUser">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/transfer_for" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Л Л"
+                                    android:textSize="14dp"
+                                    android:textColor="#6a6a6a"
+                                    android:layout_gravity="center" />
+
+                                <FrameLayout
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="bottom|end"
+                                    android:layout_marginBottom="-2dp"
+                                    android:layout_marginEnd="-2dp"
+                                    android:background="@drawable/orange_circle">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="1"
+                                        android:textSize="10dp"
+                                        android:textColor="#FFFFFF" />
+                                </FrameLayout>
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Леонид\nЛукиных"
+                                android:textAlignment="center"
+                                android:textSize="14dp"
+                                android:textColor="@color/black"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:onClick="OpenExpenses">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Расходы в мае"
+                        android:textSize="19dp"
+                        android:textColor="@color/black"
+                        />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Все"
+                        android:textSize="16dp"
+                        android:textColor="#138127"
+                        />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:onClick="OpenAllExpenses">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@mipmap/smth"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginLeft="12dp"/>
+
+
+                            <TextView
+                                android:layout_marginTop="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1 198 ₽"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Все расходы\nиз 45 000 ₽"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="11dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="#898989"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:onClick="OpenAuto">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@mipmap/bus"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginLeft="12dp"/>
+
+
+                            <TextView
+                                android:layout_marginTop="35dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Транспорт"
+                                android:textColor="#898989"
+                                android:textSize="13dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="928 ₽"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="13dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/black"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:onClick="OpenCafe">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@mipmap/st_pr"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginLeft="12dp"/>
+
+
+                            <TextView
+                                android:layout_marginTop="22dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Рестораны\nи кафе"
+                                android:textColor="#898989"
+                                android:textSize="13dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="928 ₽"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="13dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/black"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="OpenCredits">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Кредиты"
+                            android:textSize="19dp"
+                            android:textColor="@color/black"
+                            />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@mipmap/arrow2"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="5dp"/>
+                    </LinearLayout>
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <ImageButton
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/plus"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:gravity="right"
+                        android:onClick="CreateCredits"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:onClick="OpenServices">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Сервисы"
+                        android:textSize="19dp"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:onClick="CreateCredits">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@mipmap/plus2"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginLeft="12dp"/>
+
+
+                            <TextView
+                                android:layout_marginTop="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Оформить"
+                                android:textColor="@color/black"
+                                android:textSize="13dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Карту, вклад,\nкредит и другое"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="11dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="#898989"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:onClick="OpenServices">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@mipmap/menu2"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="12dp"/>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Все\nсервисы"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="13dp"
+                                android:layout_marginTop="40dp"
+                                android:textColor="@color/black"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:onClick="OpenServices">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@mipmap/star"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginLeft="12dp"/>
+
+
+                            <TextView
+                                android:layout_marginTop="22dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Предложения\nи скидки"
+                                android:textColor="@color/black"
+                                android:textSize="13dp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Для вас"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="13dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="#898989"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:onClick="OpenRecommend">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Рекомендуем"
+                        android:textSize="19dp"
+                        android:textColor="@color/black"
+                        />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ещё"
+                        android:textSize="16dp"
+                        android:textColor="#138127"
+                        />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="280dp"
+                            android:orientation="vertical"
+                            android:onClick="OpenReclama">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="220dp"
+                                android:src="@drawable/skidki"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Рекламодатель\nООО «Маркетплейс»"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="11dp"
+                                android:layout_marginTop="10dp"
+                                android:textColor="#898989"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="280dp"
+                            android:orientation="vertical"
+                            android:onClick="OpenReclama">
+
+                            <FrameLayout
+                                android:layout_width="150dp"
+                                android:layout_height="150dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:src="@drawable/promo"/>
+
+                            </FrameLayout>
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="СберМаркет"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="11dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="#898989"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Скидка 30%\nна первый заказ"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="13dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/black"
+                                />
+
+                            <View
+                                android:layout_marginTop="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#898989"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Рекламодатель ООО\n«Инстамарт Сервис»"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="11dp"
+                                android:layout_marginTop="10dp"
+                                android:textColor="#898989"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="280dp"
+                            android:orientation="vertical"
+                            android:onClick="OpenReclama">
+
+                            <FrameLayout
+                                android:layout_width="150dp"
+                                android:layout_height="150dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:src="@drawable/promo"
+                                    android:scaleType="fitXY"/>
+
+                            </FrameLayout>
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="СберМаркет"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="11dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="#898989"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Скидка 30%\nна первый заказ"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="13dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/black"
+                                />
+
+                            <View
+                                android:layout_marginTop="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#898989"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Рекламодатель ООО\n«Маркетплейс»"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="11dp"
+                                android:layout_marginTop="10dp"
+                                android:textColor="#898989"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:onClick="OpenCourse">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Курсы валют"
+                        android:textColor="@color/black"
+                        android:textSize="19dp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ещё"
+                        android:textSize="16dp"
+                        android:textColor="#138127"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:onClick="OpenCNY">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:layout_gravity="bottom"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="40dp"
+                            android:text="Купить"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:textColor="@color/black"
+                            android:text="Продать"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:onClick="OpenCNY">
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@mipmap/china"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CNY"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="25dp"/>
+                            <TextView
+                                android:layout_marginTop="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Юань"
+                                android:textSize="10dp"
+                                android:textColor="#898989"
+                                android:layout_marginLeft="25dp"/>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@mipmap/arrow_min"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="5dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12,75"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@mipmap/arrow_ip"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="5dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12,58"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:onClick="OpenUSD">
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@mipmap/usa"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="USD"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="25dp"/>
+                            <TextView
+                                android:layout_marginTop="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Доллар"
+                                android:textSize="10dp"
+                                android:textColor="#898989"
+                                android:layout_marginLeft="25dp"/>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@mipmap/arrow_min"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="5dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="93,20"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@mipmap/arrow_min"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="5dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="90.40"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:onClick="OpenAED">
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@mipmap/aed"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AED"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="25dp"/>
+                            <TextView
+                                android:layout_marginTop="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Дирхам"
+                                android:textSize="10dp"
+                                android:textColor="#898989"
+                                android:layout_marginLeft="25dp"/>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@mipmap/arrow_min"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="5dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12,75"
+                                android:textColor="@color/black"
+                                android:textStyle=""/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@mipmap/arrow_min"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="5dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12,58"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#edeef0"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:onClick="OpenMain">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/house"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_marginTop="2.5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Главный"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textColor="#187e2a"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:onClick="OpenSafe">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/qeq"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_marginTop="2.5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Накопления"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textColor="#adadad"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:onClick="OpenAssistent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/eee"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_marginTop="2.5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ассистент"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textColor="#adadad"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:onClick="OpenMenuTrans">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/arr"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_marginTop="2.5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Платежи"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textColor="#adadad"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:onClick="OpenHistory">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/time"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_marginTop="2.5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="История"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textColor="#adadad"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
